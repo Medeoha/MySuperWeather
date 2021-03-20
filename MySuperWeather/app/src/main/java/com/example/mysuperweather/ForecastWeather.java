@@ -117,8 +117,29 @@ public class ForecastWeather extends Fragment {
                  forecastArray.add(new ForecastWeatherObject(temperature,formattedDate,iconID));
              }
 
-             test.setAdapter(new forecastAdapter(this.getActivity(),forecastArray));// On transmet ces infos a l'adapter qui va traiter les donner pour l'affichage
 
+             test.setAdapter(new forecastAdapter(this.getActivity(),forecastArray));// On transmet ces infos a l'adapter qui va traiter les donner pour l'affichage
+            switch (j.getJSONArray("weather").getJSONObject(2).getString("main")) {//pour le changement de fond d'ecran
+                case "Clouds":
+                    v.setBackground(getResources().getDrawable(R.drawable.clouds));
+                    break;
+                case "Rain":
+                case "Drizzle"    :
+                    v.setBackground(getResources().getDrawable(R.drawable.rainy));
+                    break;
+                case  "Thunderstorm"   :
+                    v.setBackground(getResources().getDrawable(R.drawable.thunderstorm));
+                    break;
+                case  "Clear"  :
+                    v.setBackground(getResources().getDrawable(R.drawable.clear));
+                    break;
+                case "Snow" :
+                    v.setBackground(getResources().getDrawable(R.drawable.neige));
+                    break;
+                default:
+                    v.setBackground(getResources().getDrawable(R.drawable.brume));
+                    break;
+            }
         } catch (JSONException e) {
             e.printStackTrace();
         }

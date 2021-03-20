@@ -120,7 +120,7 @@ public class TomorrowFragment extends Fragment {
 
             switch (def) {
                 case "Clouds":
-                    v.setBackground(getResources().getDrawable(R.drawable.background));
+                    v.setBackground(getResources().getDrawable(R.drawable.clouds));
                     break;
                 case "Rain":
                 case "Drizzle"    :
@@ -131,6 +131,14 @@ public class TomorrowFragment extends Fragment {
                     break;
                 case  "Clear"  :
                     v.setBackground(getResources().getDrawable(R.drawable.clear));
+                    break;
+
+                case "Snow" :
+                    v.setBackground(getResources().getDrawable(R.drawable.neige));
+                    break;
+
+                default:
+                    v.setBackground(getResources().getDrawable(R.drawable.brume));
                     break;
             }
 

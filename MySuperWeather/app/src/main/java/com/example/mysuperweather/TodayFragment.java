@@ -130,7 +130,7 @@ public class TodayFragment extends Fragment {
 
             switch (j.getJSONArray("weather").getJSONObject(0).getString("main")) {//pour le changement de fond d'ecran
                 case "Clouds":
-                    v.setBackground(getResources().getDrawable(R.drawable.background));
+                    v.setBackground(getResources().getDrawable(R.drawable.clouds));
                     break;
                 case "Rain":
                 case "Drizzle"    :
@@ -141,6 +141,12 @@ public class TodayFragment extends Fragment {
                     break;
                 case  "Clear"  :
                     v.setBackground(getResources().getDrawable(R.drawable.clear));
+                    break;
+                case "Snow" :
+                    v.setBackground(getResources().getDrawable(R.drawable.neige));
+                    break;
+                default:
+                    v.setBackground(getResources().getDrawable(R.drawable.brume));
                     break;
             }
             ((TextView) v.findViewById(R.id.description)).setText(cityName);
