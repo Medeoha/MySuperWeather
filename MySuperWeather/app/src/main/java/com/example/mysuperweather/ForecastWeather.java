@@ -129,7 +129,7 @@ public class ForecastWeather extends Fragment {
                     weatherForecastView.setBackgroundResource(R.drawable.rainy);
                     break;
                 case  "Thunderstorm"   :
-                    weatherForecastView.setBackgroundResource(R.drawable.thunderstorm);
+                    weatherForecastView.setBackgroundResource(R.drawable.thunder);
                     break;
                 case  "Clear"  :
                     weatherForecastView.setBackgroundResource(R.drawable.clear);

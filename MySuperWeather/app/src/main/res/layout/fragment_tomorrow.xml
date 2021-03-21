@@ -5,7 +5,7 @@
     android:id="@+id/TomorrowCoordinatorLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/background___copie"
+    android:background="@drawable/thunder"
     tools:context=".TomorrowFragment">
 
     <!-- TODO: Update blank fragment layout -->
@@ -15,8 +15,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
-        android:textColor="@color/black"
         android:text="TextView"
+        android:textColor="@color/black"
         android:textSize="24sp"
         android:textStyle="normal|bold"
 
@@ -31,11 +31,11 @@
     <TextView
         android:id="@+id/TomorrowTempMin"
         android:layout_width="wrap_content"
-        android:textColor="@color/black"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
         android:layout_marginTop="16dp"
         android:text="TextView"
+        android:textColor="@color/black"
         android:textSize="24sp"
         android:textStyle="normal|bold"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -50,8 +50,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="TextView"
-        android:textSize="24sp"
         android:textColor="@color/black"
+        android:textSize="24sp"
         android:textStyle="normal|bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -65,8 +65,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/hello_blank_fragment_1"
-        android:textSize="24sp"
         android:textColor="@color/black"
+        android:textSize="24sp"
         android:textStyle="normal|bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
