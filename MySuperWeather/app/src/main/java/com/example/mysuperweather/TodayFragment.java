@@ -117,7 +117,7 @@ public class TodayFragment extends Fragment {
 
 ;
         this.j = j;
-        try {
+        try { // on recupere les données du json
             String cityName = j.getString("name") + "\n"+j.getJSONArray("weather").getJSONObject(0).getString("main");
             double temperature = j.getJSONObject("main").getDouble("temp");
             long date_int = (long)j.getInt("dt")*1000;
@@ -150,7 +150,7 @@ public class TodayFragment extends Fragment {
                     v.setBackground(getResources().getDrawable(R.drawable.brume));
                     break;
             }
-            ((TextView) v.findViewById(R.id.description)).setText(cityName);
+            ((TextView) v.findViewById(R.id.description)).setText(cityName);//On affiche les données sur la view 
             ((TextView) v.findViewById(R.id.TodayTemp)).setText(Double.toString(temperature) +"°C");
             ((TextView) v.findViewById(R.id.TodayWind)).setText(Double.toString(wind));
             ((TextView) v.findViewById(R.id.DefToday)).setText(formattedDate);

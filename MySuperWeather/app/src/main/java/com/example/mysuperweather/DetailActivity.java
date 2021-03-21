@@ -83,7 +83,28 @@ public class DetailActivity extends Fragment {
 
         ((TextView) v.findViewById(R.id.sunrise)).setText(test.getString("sunrise"));
         ((TextView) v.findViewById(R.id.sunset)).setText(test.getString("sunset"));
+        switch (test.getString("def")) {//pour le changement de fond d'ecran
+            case "Clouds":
+                v.setBackground(getResources().getDrawable(R.drawable.clouds));
+                break;
+            case "Rain":
+            case "Drizzle"    :
+                v.setBackground(getResources().getDrawable(R.drawable.rainy));
+                break;
+            case  "Thunderstorm"   :
+                v.setBackground(getResources().getDrawable(R.drawable.thunder));
 
+                break;
+            case  "Clear"  :
+                v.setBackground(getResources().getDrawable(R.drawable.clear));
+                break;
+            case "Snow" :
+                v.setBackground(getResources().getDrawable(R.drawable.neige));
+                break;
+            default:
+                v.setBackground(getResources().getDrawable(R.drawable.brume));
+                break;
+        }
 
         Button button = (Button) v.findViewById(R.id.retour_btn);
         button.setOnClickListener(new View.OnClickListener()

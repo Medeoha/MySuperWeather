@@ -47,7 +47,8 @@ public class MyLovelyOnClickListener implements View.OnClickListener {//Bouton p
             Date date_sr = new Date(date_sunset);
             String formattedDateSS = dateFormat.format(date_sr);
 
-
+            String def = j.getJSONArray("weather").getJSONObject(0).getString("main");
+            sendData.putString("def",def);//on encapsule les datas pour les envoyer au fragment detail
             sendData.putString("temperature", Double.toString(temperature));
             sendData.putString("temperatureMin", Double.toString(temperatureMin));
             sendData.putString("temperatureMax", Double.toString(temperatureMax));
