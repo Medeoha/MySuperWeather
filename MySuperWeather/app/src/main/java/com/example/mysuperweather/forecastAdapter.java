@@ -43,7 +43,7 @@ public class forecastAdapter extends BaseAdapter {//meme principe que pour Flick
     @Override
     public View getView(int position, View view, ViewGroup parent) {
         view = inflater.inflate(R.layout.adapter_item, null);
-        ForecastWeatherObject currentWeatherForecast = getItem(position); // On recupere l'objet lié a la journée et on 
+        ForecastWeatherObject currentWeatherForecast = getItem(position); // On recupere l'objet lié a la journée et on assigne les datas aux text view
         TextView textemp = view.findViewById(R.id.temp);
         textemp.setText(currentWeatherForecast.getTemperature());
 
@@ -51,7 +51,7 @@ public class forecastAdapter extends BaseAdapter {//meme principe que pour Flick
         textdate.setText(currentWeatherForecast.getDate());
 
         try {
-            new AsyncBitmapDownloader(currentWeatherForecast.iconid,view.findViewById(R.id.weather_icon)).execute();
+            new AsyncBitmapDownloader(currentWeatherForecast.iconid,view.findViewById(R.id.weather_icon)).execute();// On recupere l'id de l'icon puis on charge sont 
         } catch (MalformedURLException e) {
             e.printStackTrace();
         }
