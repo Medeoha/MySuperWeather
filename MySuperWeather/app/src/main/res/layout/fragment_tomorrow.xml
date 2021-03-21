@@ -15,12 +15,14 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
+        android:textColor="@color/black"
         android:text="TextView"
         android:textSize="24sp"
         android:textStyle="normal|bold"
 
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@+id/imageView4"
         app:layout_constraintTop_toTopOf="parent"
@@ -29,6 +31,7 @@
     <TextView
         android:id="@+id/TomorrowTempMin"
         android:layout_width="wrap_content"
+        android:textColor="@color/black"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
         android:layout_marginTop="16dp"
@@ -62,6 +65,7 @@
         android:layout_height="wrap_content"
         android:text="@string/hello_blank_fragment_1"
         android:textSize="24sp"
+        android:textColor="@color/black"
         android:textStyle="normal|bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -114,6 +118,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="TextView"
+        android:textColor="@color/black"
         android:textSize="24sp"
         android:textStyle="normal|bold"
         app:layout_constraintBottom_toTopOf="@+id/ImageWeatherTomorrow"

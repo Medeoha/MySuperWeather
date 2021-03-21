@@ -29,15 +29,17 @@
 
     <TextView
         android:id="@+id/date_forecast"
-
+        android:textColor="@color/black"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="lapin"
         android:textSize="18dp"
         android:textStyle="normal|bold" />
 
+
     <TextView
         android:id="@+id/temp"
+        android:textColor="@color/black"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/date_forecast"
