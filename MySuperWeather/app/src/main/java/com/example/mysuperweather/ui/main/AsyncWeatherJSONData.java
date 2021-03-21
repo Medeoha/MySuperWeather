@@ -19,7 +19,7 @@ import java.util.function.Consumer;
 public class AsyncWeatherJSONData extends AsyncTask<String, Void, JSONObject> {
 
     Consumer<JSONObject> callback;
-    URL url = new URL("http://api.openweathermap.org/data/2.5/weather?lat=48.764519&lon=2.3969249&appid=f7e10ee1642ff17719eee0cd67ab01c5&units=metric");
+    URL url = new URL("http://api.openweathermap.org/data/2.5/weather?lat=48.764519&lon=2.3969249&appid=f7e10ee1642ff17719eee0cd67ab01c5&units=metric");//URL et constructeur de test
     public AsyncWeatherJSONData(Consumer<JSONObject> callback) throws MalformedURLException {
 
         this.callback = callback;

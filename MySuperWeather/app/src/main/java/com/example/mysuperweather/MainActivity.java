@@ -51,7 +51,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         FloatingActionButton fab = findViewById(R.id.fab);
 
-        permissions.add(ACCESS_FINE_LOCATION);
+        permissions.add(ACCESS_FINE_LOCATION);//permissions necessaires
         permissions.add(ACCESS_COARSE_LOCATION);
 
         permissionsToRequest = findUnAskedPermissions(permissions);
@@ -126,7 +126,8 @@ public class MainActivity extends AppCompatActivity {
 
 
                     if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
-                        if (shouldShowRequestPermissionRationale((String) permissionsRejected.get(0))) {
+                        if (shouldShowRequestPermissionRationale((String) permissionsRejected.get(0))) {//Si il y a des permissions rejeté on signalise à l'utilisateur que le GPS est obligatoire et on redemande l'acces
+
                             showMessageOKCancel("These permissions are mandatory for the application. Please allow access.",
                                     new DialogInterface.OnClickListener() {
                                         @Override
