@@ -72,7 +72,7 @@ public class DetailActivity extends Fragment {
         // Inflate the layout for this fragment
         v = inflater.inflate(R.layout.fragment_detail_activity, container, false);
         Bundle test = getArguments();
-        ;
+
 
         ((TextView) v.findViewById(R.id.Detailtemp)).setText("Actual temp = "+test.getString("temperature")+"°C");
         ((TextView) v.findViewById(R.id.temp_min)).setText("Min temp = "+test.getString("temperatureMin")+"°C");
@@ -93,7 +93,6 @@ public class DetailActivity extends Fragment {
                 break;
             case  "Thunderstorm"   :
                 v.setBackground(getResources().getDrawable(R.drawable.thunder));
-
                 break;
             case  "Clear"  :
                 v.setBackground(getResources().getDrawable(R.drawable.clear));

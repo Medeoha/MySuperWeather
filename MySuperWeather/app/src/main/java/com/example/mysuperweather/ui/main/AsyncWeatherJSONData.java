@@ -27,7 +27,6 @@ public class AsyncWeatherJSONData extends AsyncTask<String, Void, JSONObject> {
 
     public AsyncWeatherJSONData(Consumer<JSONObject> callback, String url) throws MalformedURLException {
         this.url = new URL(url);
-        Log.i("URL",this.url.toString());
         this.callback = callback;
     }
 
@@ -47,7 +46,6 @@ public class AsyncWeatherJSONData extends AsyncTask<String, Void, JSONObject> {
             urlConnection.connect();
             InputStream in = new BufferedInputStream(urlConnection.getInputStream());
             String s = readStream(in);
-            System.out.println(s);
             j = new JSONObject(s);
 
 
