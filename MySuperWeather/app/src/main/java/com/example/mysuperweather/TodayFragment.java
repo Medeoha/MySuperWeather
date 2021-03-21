@@ -150,7 +150,7 @@ public class TodayFragment extends Fragment {
                     v.setBackground(getResources().getDrawable(R.drawable.brume));
                     break;
             }
-            ((TextView) v.findViewById(R.id.description)).setText(cityName);//On affiche les données sur la view 
+            ((TextView) v.findViewById(R.id.description)).setText(cityName);//On affiche les données sur la view
             ((TextView) v.findViewById(R.id.TodayTemp)).setText(Double.toString(temperature) +"°C");
             ((TextView) v.findViewById(R.id.TodayWind)).setText(Double.toString(wind));
             ((TextView) v.findViewById(R.id.DefToday)).setText(formattedDate);
