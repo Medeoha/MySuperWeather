@@ -99,7 +99,9 @@ public class ForecastWeather extends Fragment {
     }
 
     private void FragmentJSON(JSONObject j) {
+        String def = "";
         try {
+
              forecastArray.clear();
              for(int i = 2 ; i < 8 ; i++)//On recupere les infos sur les 6 prochains jours
              {
@@ -117,32 +119,36 @@ public class ForecastWeather extends Fragment {
                  forecastArray.add(new ForecastWeatherObject(temperature,formattedDate,iconID));
              }
 
-
-             test.setAdapter(new forecastAdapter(this.getActivity(),forecastArray));// On transmet ces infos a l'adapter qui va traiter les donner pour l'affichage
-            switch (j.getJSONArray("weather").getJSONObject(2).getString("main")) {//pour le changement de fond d'ecran
+            GridView weatherForecastView = (GridView) v.findViewById(R.id.forecast_grid_view);
+            def = j.getJSONArray("daily").getJSONObject(2).getJSONArray("weather").getJSONObject(0).getString("main");
+           
+            switch (def) {//pour le changement de fond d'ecran
                 case "Clouds":
-                    v.setBackground(getResources().getDrawable(R.drawable.clouds));
+                    weatherForecastView.setBackgroundResource(R.drawable.clouds);
                     break;
                 case "Rain":
                 case "Drizzle"    :
-                    v.setBackground(getResources().getDrawable(R.drawable.rain));
+                    weatherForecastView.setBackgroundResource(R.drawable.rainy);
                     break;
                 case  "Thunderstorm"   :
-                    v.setBackground(getResources().getDrawable(R.drawable.thunder));
+                    weatherForecastView.setBackgroundResource(R.drawable.thunderstorm);
                     break;
                 case  "Clear"  :
-                    v.setBackground(getResources().getDrawable(R.drawable.clear));
+                    weatherForecastView.setBackgroundResource(R.drawable.clear);
                     break;
                 case "Snow" :
-                    v.setBackground(getResources().getDrawable(R.drawable.neige));
+                    weatherForecastView.setBackgroundResource(R.drawable.neige);
                     break;
                 default:
-                    v.setBackground(getResources().getDrawable(R.drawable.brume));
+                    weatherForecastView.setBackgroundResource(R.drawable.brume);
                     break;
             }
+            test.setAdapter(new forecastAdapter(this.getActivity(),forecastArray));// On transmet ces infos a l'adapter qui va traiter les donner pour l'affichage
+
         } catch (JSONException e) {
             e.printStackTrace();
         }
+
 
 
 

@@ -134,7 +134,7 @@ public class TodayFragment extends Fragment {
                     break;
                 case "Rain":
                 case "Drizzle"    :
-                    v.setBackground(getResources().getDrawable(R.drawable.rain));
+                    v.setBackground(getResources().getDrawable(R.drawable.rainy));
                     break;
                 case  "Thunderstorm"   :
                     v.setBackground(getResources().getDrawable(R.drawable.thunder));
